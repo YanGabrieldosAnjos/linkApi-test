@@ -1,0 +1,50 @@
+{
+   "name": "lab-test-api",
+   "version": "1.0.0",
+   "description": "",
+   "main": "index.js",
+   "scripts": {
+      "test": "NODE_ENV=test jest  --setupFiles dotenv/config",
+      "test:watch": "npm run test -- --watchAll",
+      "start": "set debug=* && ts-node-dev --respawn --transpileOnly -r dotenv/config ./src/index.ts",
+      "postgres:start": "docker run -d -p 5432:5432 --name postgres postgres",
+      "database:create": "docker exec postgres psql -U postgres postgres -c \"CREATE DATABASE $(grep DB_DATABASE .env | cut -d= -f 2)\""
+   },
+   "author": "",
+   "license": "ISC",
+   "devDependencies": {
+      "@types/express": "^4.17.6",
+      "@types/node": "^8.0.29",
+      "cross-env": "^7.0.2",
+      "express": "^4.17.1",
+      "jest": "^26.2.2",
+      "supertest": "^4.0.2",
+      "ts-node": "3.3.0",
+      "ts-node-dev": "^1.0.0-pre.44",
+      "tslint": "^6.1.2",
+      "typescript": "3.9.3"
+   },
+   "dependencies": {
+      "@types/cors": "^2.8.6",
+      "@types/dotenv": "^8.2.0",
+      "@types/faker": "^4.1.12",
+      "@types/jest": "^26.0.8",
+      "@types/mongoose": "^5.7.36",
+      "@types/supertest": "^2.0.10",
+      "@types/urlencode": "^1.1.2",
+      "axios": "^0.19.2",
+      "connect-form": "^0.2.1",
+      "cors": "^2.8.5",
+      "dotenv": "^8.2.0",
+      "faker": "^4.1.0",
+      "mongoose": "^5.9.29",
+      "pg": "^8.3.0",
+      "pipedrive": "^10.4.3",
+      "reflect-metadata": "^0.1.10",
+      "ts-jest": "^26.1.4",
+      "tsc": "^1.20150623.0",
+      "typeorm-naming-strategies": "^1.1.0",
+      "urlencode": "^1.1.0",
+      "uuidv4": "^6.2.2"
+   }
+}
