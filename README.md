@@ -1,20 +1,19 @@
-# LAB TEST API
-- Esse projeto consiste no processo seletivo da laborit
+# LinkApi TEST
+- Esse projeto consiste no processo seletivo da linkApi
 
 # Pré-requisitos
--  docker
+-  contas no pipedrive, bling e mongoDB Atlas
 -  npm 6.12.x
 -  node 12.3.x
 
 # Instalação
-Após o ambiente com o node e o npm instalado, instalar o docker
+Instalar node e npm
 # Como rodar
-npm run postgres:start (para criar uma imagem do banco)
-npm run database:create (para criar um banco)
 npm i (para baixar os modules)
-npm start (inicia o servidor na porta 3000)
+npm start (inicia o servidor)
 
-# Como rodar testes
-npm run postgres:start (para criar uma imagem do banco)
-npm run database:create (para criar um banco)
-npm test (roda os test cases)
+# Endpoints
+
+POST /api/pipedrive/dealsOnBling: Seleciona oportudinades com status won e insere como pedido na bling, e salva no banco com valor total e data
+
+GET /api/pipedrive/dealsOnBling: Retorna oportunidades que foram salvas no banco
