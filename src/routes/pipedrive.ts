@@ -5,7 +5,7 @@ import { createDeals } from "../controllers/deal";
 const router = Router();
 
 
-router.post("/deals", async (req: Request, res: Response)=>{
+router.post("/dealsOnBling", async (req: Request, res: Response)=>{
   try {
     await createDeals();
     res.send("Oportunidades inseridas com sucesso na bling!");
