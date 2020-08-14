@@ -2,7 +2,7 @@ import {Document, createConnection, set} from 'mongoose';
 const {MONGO_USER, MONGO_PASSWORD, DB_NAME, DB_URI} = process.env;
 
 import * as s from './schemas';
-import { IProduct } from './integrations/pipedrive';
+import { IProduct } from './controllers/product';
 
 export const mongoOptions = {
     user: MONGO_USER,
