@@ -1,5 +1,5 @@
-import { IProduct, getDeals, getPipedriveDeals } from "../integrations/pipedrive";
-import { formatedProducts } from "./product";
+import {  getPipedriveDeals } from "../integrations/pipedrive";
+import { formatedProducts, IProduct } from "./product";
 import { dealModel } from "../models";
 import { storeRequest } from "../integrations/bling";
 

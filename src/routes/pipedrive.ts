@@ -1,6 +1,5 @@
 import { Router, Request, Response } from "express";
-import {getPipedriveDeals, getDeals} from "../integrations/pipedrive/index";
-import { storeRequest } from "../integrations/bling";
+import { getDeals} from "../integrations/pipedrive/index";
 import { createDeals } from "../controllers/deal";
 
 const router = Router();
